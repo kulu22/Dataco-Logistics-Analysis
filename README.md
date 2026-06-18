@@ -1,23 +1,39 @@
-Logistics and Order Performance Analysis of the Dataco Dataset
 
-**Overview**
+# Logistics and Order Performance Analysis — DataCo Dataset
 
-This project analyses the DataCo Smart Supply Chain dataset of 180,000+ orders across five global markets. I cleaned the data by removing duplicates, dropping irrelevant columns, fixing date formats, and creating three calculated columns: Delivery Gap, Item Revenue, and Delivery Label. I then conducted exploratory analysis in Excel before using SQL for deeper analysis, with findings visualized on Looker Studio
-The analysis covers four business areas: delivery performance, sales and profitability, order completion, and regional logistics to identify operational inefficiencies and provide actionable recommendations.
+## Project Overview
+Analysis of 180,000+ supply chain orders across five global markets 
+to identify operational inefficiencies and provide actionable 
+business recommendations.
 
-- **Exploratory Analysis using Excel**
-    - Delivery Performance: I analysed late delivery risk across product categories and tested three hypotheses. If product weight, shipping method, and customer location impact late deliveries. All three showed similar risk patterns across categories, ruling them out as the primary cause. Using a Delivery date gap column I created from the difference between expected and actual delivery dates, I found outdoor equipment had the highest delivery gap.
-      
-    - Sales and Profitability: I analysed sales volume and profitability by category and department. Fishing and Fan Shop had the highest volume, but I found that sales volume does not always reflect profitability. After calculating orders’ profit ratios, I confirmed Fan Shop generates at least 12 times more absolute profit than departments with comparable or higher ratios, making it the business's most valuable department.
-    
-- **Deepdive Analysis using SQL**
-    
-    - Delivery Performance by Shipping Mode: To gain deeper insight into delivery performance, I used SQL to test whether shipping method impacts late delivery outcomes. My initial analysis ranked shipping modes by total late deliveries, which showed Standard Class as the highest. However, this was misleading. Upon further analysis comparing late deliveries with total orders per shipping mode, First Class shipping had over 95% of its orders arriving late — the worst rate among the four shipping modes. This is significant because First Class customers are likely the highest spenders with the highest expectations. A 95% late delivery rate means the business is consistently failing its most valuable customers. The consequences include poor customer experience, revenue loss from churn, and ceding those customers to competitors. I recommend an urgent operational review of First Class and second class fulfilment processes to identify why premium shipments are underperforming and establish a realistic service level agreement that the business can consistently meet.
-        
-    - Regional Delivery Gap Analysis: The order date column contained inconsistent datetime formats across rows, making reliable year-based grouping in SQLite challenging. To investigate whether delivery performance varies by region, I analysed total orders, late orders, late delivery rate, and average delivery gap across all five markets. The results were strikingly consistent; every region recorded a late delivery rate between 54% and 55% with an average delivery gap of 0.57 days. No single region stood out as uniquely problematic. This mirrors the earlier Order Status analysis, where monitoring rates were equally narrow across all departments at 8-10%, pointing to a systemic operational issue rather than a geographic or departmental one. I recommend a root cause investigation focused on fulfilment operations, platform reliability, and order communication processes. Left unaddressed, consistently unmet delivery expectations will accelerate customer churn and erode revenue across all markets simultaneously.
-        
-    - Sales and Profitability by Department and Category: To investigate which business units and product categories drive the most profit, I aggregated total benefit, average profit ratio, and total orders by department and category using SQL. At the department level, Fan Shop leads with approximately 1.8 million in total benefit at a 12% profit ratio. While Technology, Outdoors, and Fitness show a slightly higher profit ratio at 13%, their combined total benefit is less than one third of Fan Shop's, making the difference negligible in absolute terms. At the category level, three tiers emerged. Tier one: Fishing, Cleats, Cardio Equipment, Camping and Hiking, and women's apparel are proven sustainable revenue streams, operating at an 11-13% profit ratio with the highest order volumes. Tier two Women's Clothing, Garden, and Music operate at 14 -15% but are underscaled with room to grow. Tier three Golf Bags and Cars, Toys have the highest profit ratios at 16-19% but the lowest volumes, representing the biggest untapped opportunity. We recommend sustaining investment in Tier one, scaling Tier two, and make provisions for targeted marketing and pricing strategies to unlock Tier three's potential.
-         
-    - Order Completion by Department: To determine whether specific departments have higher rates of problematic orders, I categorised order statuses into three groups — Pipeline (Complete, Processing, Pending, Payment Review, Pending Payment), Monitoring (Cancelled, On Hold, Suspected Fraud), and Ambiguous (Closed) — then calculated the monitoring rate per department. Pipeline orders accounted for at least 85% of total orders across all departments. The monitoring rate ranged narrowly between 8% and 10%, with no department standing out significantly, suggesting a systemic issue rather than a departmental one, most likely payment friction or platform reliability. We recommend a review of the payment and checkout experience, as resolving this at the system level would improve completion rates across all departments simultaneously.
-        
+**Tools Used:** SQL (SQLite/DBeaver), Excel, Google Looker Studio  
+**Dataset:** [DataCo Smart Supply Chain — Kaggle](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)
+
+## Business Questions
+1. Does shipping mode impact late delivery rates?
+2.  Does delivery performance vary by region?
+3. Which product categories and departments are most profitable?
+4. Which departments have the highest order risk rates?
+
+## Key Findings
+- First Class shipping has a **95.3% late delivery rate** — the worst 
+  of all four shipping modes despite being a premium service
+- Fan Shop generates **12x more absolute profit** than departments 
+  with higher profit ratios
+- Order risk rate is consistently **8-10% across all departments** — 
+  indicating a systemic issue rather than departmental
+- All five regions record a **54-55% late delivery rate** — confirming 
+  a systemic operational problem
+
+## Dashboard
+[View Live Dashboard](https://datastudio.google.com/s/hWrix3mT5ys)
+
+## Portfolio Write-up
+[View Full Analysis](https://www.notion.so/Hauwa-Ibrahim-Logistics-and-Order-Performance-Analysis-of-the-Dataco-Dataset-3635587c50c880deaccfc75f5f57c0e0?pvs=28)
+
+## Files in this Repository
+- `01_delivery_performance.sql` — Shipping mode vs late delivery rate
+- `02_sales_profitability.sql` — Department and category profit analysis
+- `03_order_completion.sql` — Order status and risk rate by department
+- `04_regional_delivery_gap.sql` — Delivery gap analysis by market
     
