@@ -1,3 +1,10 @@
+ANALYSIS: Regional Delivery Gap Analysis
+Business Question: Does delivery performance vary by region?
+Tools: SQLite via DBeaver
+Data Note: The date column had inconsistent formats, year-based trend analysis was constrained.
+Full write-up: findings/Regional_delivery_gap.md
+
+    
 ---REGIONAL DELIVERY GAP(Order by Region)
 SELECT
     Market AS region,
