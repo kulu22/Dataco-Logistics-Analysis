@@ -1,3 +1,9 @@
+ANALYSIS: Sales and Profitability by Department and Category 
+Business Question: Which business units and product categories drive the most profit? 
+Tools: SQLite via DBeaver 
+Full write-up: findings/Sales_profitability.md 
+
+
 ---SALES AND PROFITABILITY (Department level)
 SELECT
     "Department Name" AS department,
