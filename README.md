@@ -36,4 +36,7 @@ business recommendations.
 - `02_sales_profitability.sql` — Department and category profit analysis
 - `03_order_completion.sql` — Order status and risk rate by department
 - `04_regional_delivery_gap.sql` — Delivery gap analysis by market
+
+## Dashboard Preview
+![Delivery Performance](screenshots/delivery_performance.png)
     
