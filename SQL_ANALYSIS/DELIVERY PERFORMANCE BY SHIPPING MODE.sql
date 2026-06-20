@@ -1,10 +1,7 @@
--- ============================================
--- ANALYSIS: Delivery Performance by Shipping Mode
--- ============================================
--- Business Question: Does shipping mode drive late deliveries?
--- Tools: SQLite via DBeaver
--- Full write-up: findings/01_delivery_performance.md
--- ============================================
+ANALYSIS: Delivery Performance by Shipping Mode
+Business Question: Does shipping mode drive late deliveries?
+Tools: SQLite via DBeaver
+Full write-up: findings/Delivery_performance.md
 
 
 ---DELIVERY PERFORMANCE BY SHIPPING MODE
