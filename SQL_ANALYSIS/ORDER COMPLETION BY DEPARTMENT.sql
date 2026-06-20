@@ -1,3 +1,8 @@
+ANALYSIS: Order Completion by Department
+Business Question: Do specific departments have higher rates of problematic orders?
+Tools: SQLite via DBeaver
+Full write-up: findings/Order_completion.md
+
 ---ORDER COMPLETION BY DEPARTMENT
 WITH order_summary AS(
     SELECT
