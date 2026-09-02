@@ -1,10 +1,5 @@
--- ============================================
--- DATA CLEANING: Date column conversion
--- ============================================
--- The order date column is stored as text in M/D/YYYY format,
--- which SQLite sorts alphabetically instead of by real date.
--- This creates a clean YYYY-MM-DD column for reliable date queries.
--- ============================================
+-- DATA CLEANING: Date column conversion: The order date column is stored as text in M/D/YYYY format, which SQLite sorts alphabetically instead of by real date.
+--This creates a clean YYYY-MM-DD column for reliable date queries.
 
 ALTER TABLE DataCoSupplyChain_SQL ADD COLUMN order_date_clean TEXT;
 
