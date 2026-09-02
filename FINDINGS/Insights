@@ -1,0 +1,56 @@
+# Executive Summary — Profit at Risk from Late Delivery
+
+**Question:** How much profit is at risk from late deliveries, and 
+where should we focus to protect it?
+
+---
+
+## KPIs
+
+- **54%** of all profit is tied to orders that arrive late
+- **~$2.1M** in profit exposed to late delivery
+- **54.83%** overall late delivery rate
+
+## Is It Getting Worse?
+
+Tracking total profit against profit at risk from January 2015 to 
+September 2017, the two lines move together — profit at risk holds 
+steady at roughly 54% of total profit throughout. This has persisted, 
+unaddressed, for three years while the business grew around it.
+
+## What's Driving It?
+
+The five highest-profit categories — Fishing, Cleats, Camping & 
+Hiking, Cardio Equipment, and Women's Apparel also carry the most 
+profit at risk. Roughly half of each top category's profit is 
+exposed to late delivery. 
+
+## Where does the pattern change?
+
+Risk is remarkably uniform everywhere — 51-55% across categories, 
+8-10% across departments, 54-55% across regions 
+except shipping mode.
+
+| Shipping Mode | Orders | Late Rate | Profit at Risk |
+|---|---|---|---|
+| Standard Class | 107,752 | 38.1% | $874,634 |
+| First Class | 27,814 | 95.3% | $616,597 |
+| Second Class | 35,216 | 76.6% | $564,534 |
+| Same Day | 9,737 | 45.7% | $84,287 |
+
+First Class fails 95% of the time despite being a premium service — 
+the business is most consistently failing the customers who pay 
+most for reliability. Standard Class has the largest profit at risk
+but the lowest late delivery rate.
+
+## How do we address this?
+
+1. **Fix First and Second Class first through business process engineering** — 35% of orders but 55% of 
+   profit at risk. Highest return for the effort, and it protects 
+   premium customers.
+2. **Improve Standard Class - largest profit at risk at $874K, 
+   but its 38% failure rate means implementing efficient process improvement.
+3. **Investigate the system** — shared fulfilment operations or platform reliability.
+
+---
+
