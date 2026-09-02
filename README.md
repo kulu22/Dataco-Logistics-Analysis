@@ -30,7 +30,7 @@ uniform across categories, departments, and regions, investigate
 shared fulfilment and platform processes rather than individual teams.
 
 ## Dashboard
-[View the live Executive Dashboard](your Looker link here)
+https://datastudio.google.com/s/uQ3GclYAsQ4 
 
 ## Repository Structure
 - `findings/` — the full business write-up, section by section
